@@ -1,0 +1,21 @@
+{
+  "name": "bug-fix-exercise",
+  "version": "1.0.0",
+  "description": "Bug fixing exercise with test prioritization",
+  "main": "src/buggy_module.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "debugging",
+    "testing",
+    "exercise"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

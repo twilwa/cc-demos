@@ -1,0 +1,312 @@
+# Terminal Coding Agents Demo Day Episode 2 - Scaffolding Guide
+
+This document outlines the initial scaffolding needed for each of the 10 exercise folders.
+
+## Global Setup
+
+### Prerequisites
+- Node.js 18+ and npm
+- Git 2.40+ (for worktree support)
+- Jest for testing framework
+- Optional: tmux, Docker
+
+### Root Structure
+```
+cc-demos/
+├── CLAUDE.md (this file)
+├── README.md (global exercise instructions)
+├── package.json (global dependencies)
+├── .gitignore
+└── exercises/
+    ├── 01_bug_fix/
+    ├── 02_spec_feature/
+    ├── 03_parallel_refactor/
+    ├── 04_unix_pipeline/
+    ├── 05_security_scan/
+    ├── 06_perf_opt/
+    ├── 07_docs_coverage/
+    ├── 08_self_healing_ci/
+    ├── 09_multi_agent/
+    └── 10_hooks_lab/
+```
+
+## Exercise Scaffolding Requirements
+
+### 01_bug_fix - Basic Bug Fix & Test Generation
+```
+01_bug_fix/
+├── package.json (with jest, basic dependencies)
+├── README_AGENT.md (agent instructions)
+├── README_HUMAN.md (human instructions)
+├── CLAUDE.md (exercise-specific context)
+├── src/
+│   └── buggy_module.js (intentionally broken code)
+├── tests/
+│   ├── unit.test.js (failing unit test)
+│   └── integration.test.js (failing integration test)
+└── jest.config.js
+```
+**Setup Tasks:**
+- Create buggy module with 2 distinct bugs
+- Write failing tests (one unit, one integration)
+- Configure Jest for fast test runs
+
+### 02_spec_feature - Spec-Driven Feature
+```
+02_spec_feature/
+├── package.json (with jest, microbench)
+├── README_AGENT.md
+├── README_HUMAN.md
+├── CLAUDE.md
+├── specs/
+│   └── feature_x_spec.md (detailed specification with CPU budget)
+├── src/
+│   └── placeholder.js
+├── tests/
+│   └── placeholder.test.js
+├── benchmark/
+│   └── bench.js (micro-benchmark scaffold)
+└── jest.config.js
+```
+**Setup Tasks:**
+- Write detailed feature spec with performance requirements
+- Create benchmark scaffold
+- Set up microbench library
+
+### 03_parallel_refactor - Multi-Agent Worktree Refactor
+```
+03_parallel_refactor/
+├── package.json
+├── README_AGENT.md
+├── README_HUMAN.md
+├── CLAUDE.md
+├── frontend/
+│   ├── CLAUDE.md (frontend-specific instructions)
+│   └── error_handling.js (needs refactoring)
+├── backend/
+│   ├── CLAUDE.md (backend-specific instructions)
+│   └── error_handling.js (needs refactoring, intentional conflict)
+└── scripts/
+    └── setup_worktrees.sh
+```
+**Setup Tasks:**
+- Create two modules with poor error handling
+- Design intentional merge conflict
+- Create worktree setup script
+
+### 04_unix_pipeline - Unix Pipeline / Batch
+```
+04_unix_pipeline/
+├── README_AGENT.md
+├── README_HUMAN.md
+├── CLAUDE.md
+├── logs/
+│   └── application_error.log (500-line stack trace)
+├── scripts/
+│   └── compare_agents.sh
+└── samples/
+    └── complex_diff.patch
+```
+**Setup Tasks:**
+- Generate realistic 500-line stack trace
+- Create sample diffs for comparison
+- Write comparison script
+
+### 05_security_scan - Security Patch & Vulnerability Scan
+```
+05_security_scan/
+├── package.json (with outdated vulnerable dependency)
+├── README_AGENT.md
+├── README_HUMAN.md
+├── CLAUDE.md
+├── src/
+│   └── vulnerable_service.js (XSS vulnerability)
+├── tests/
+│   └── security.test.js (placeholder)
+├── scripts/
+│   └── security_scan.sh
+└── hooks/
+    └── deny-prod-paths.js
+```
+**Setup Tasks:**
+- Add known vulnerable dependency
+- Create code with XSS vulnerability
+- Set up security scanning script
+
+### 06_perf_opt - Performance Profiling & Auto-Optimisation
+```
+06_perf_opt/
+├── package.json (with benchmark tools)
+├── README_AGENT.md
+├── README_HUMAN.md
+├── CLAUDE.md
+├── src/
+│   └── fibonacci.js (intentionally slow implementation)
+├── benchmark/
+│   └── bench.js (performance measurement)
+└── tests/
+    └── fibonacci.test.js
+```
+**Setup Tasks:**
+- Implement slow O(2^n) fibonacci
+- Create benchmark harness
+- Set performance targets
+
+### 07_docs_coverage - Docs Generation & Comment Coverage
+```
+07_docs_coverage/
+├── package.json (with jsdoc, docusaurus)
+├── README_AGENT.md
+├── README_HUMAN.md
+├── CLAUDE.md
+├── src/
+│   ├── undocumented1.js
+│   ├── undocumented2.js
+│   └── partially_documented.js
+├── scripts/
+│   └── count_undocumented.js
+└── docusaurus.config.js (basic config)
+```
+**Setup Tasks:**
+- Create mix of documented/undocumented functions
+- Set up Docusaurus skeleton
+- Write documentation coverage counter
+
+### 08_self_healing_ci - Self-Healing CI Pipeline
+```
+08_self_healing_ci/
+├── package.json
+├── README_AGENT.md
+├── README_HUMAN.md
+├── CLAUDE.md
+├── .github/
+│   └── workflows/
+│       ├── ci.yml
+│       └── auto-fix.yml
+├── src/
+│   └── main.js
+├── tests/
+│   └── main.test.js
+└── scripts/
+    └── parse_failure.js
+```
+**Setup Tasks:**
+- Create GitHub Actions workflow
+- Set up create-pull-request action
+- Write failure parsing script
+
+### 09_multi_agent - Planner + Coder Multi-Agent Showdown
+```
+09_multi_agent/
+├── README_AGENT.md
+├── README_HUMAN.md
+├── CLAUDE.md
+├── spec.md (detailed feature specification)
+├── tasks.yaml (to be generated by planner)
+├── src/
+│   └── placeholder.js
+└── tests/
+    └── placeholder.test.js
+```
+**Setup Tasks:**
+- Write comprehensive spec document
+- Create task YAML template
+- Set up execution framework
+
+### 10_hooks_lab - Hooks & Permissions Hardening Lab
+```
+10_hooks_lab/
+├── package.json
+├── README_AGENT.md
+├── README_HUMAN.md
+├── CLAUDE.md
+├── hooks/
+│   ├── pre-commit.js
+│   └── permissions.json
+├── src/
+│   └── main.js
+└── scripts/
+    └── toggle_hooks.sh
+```
+**Setup Tasks:**
+- Create pre-commit hook blocking destructive commands
+- Set up permissions configuration
+- Write hook toggle script
+
+## Common Components
+
+### Standard package.json template
+```json
+{
+  "name": "exercise-{number}-{name}",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src",
+    "reset": "git reset --hard ORIG_HEAD && git clean -fd"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "eslint": "^8.0.0"
+  }
+}
+```
+
+### Standard jest.config.js
+```javascript
+module.exports = {
+  testEnvironment: 'node',
+  coverageDirectory: 'coverage',
+  collectCoverageFrom: ['src/**/*.js'],
+  testMatch: ['**/tests/**/*.test.js']
+};
+```
+
+### README_AGENT.md template
+```markdown
+# Exercise {number}: {name}
+
+## Your Task
+[Clear description of what the agent should accomplish]
+
+## Context
+[Any necessary background information]
+
+## Requirements
+1. [Specific requirement 1]
+2. [Specific requirement 2]
+3. ...
+
+## Success Criteria
+- [ ] All tests pass
+- [ ] [Additional criteria]
+- [ ] Code follows best practices
+
+## Available Commands
+- `npm test` - Run tests
+- `npm run lint` - Check code style
+- [Additional commands]
+```
+
+### README_HUMAN.md template
+```markdown
+# Exercise {number}: {name} - Human Guide
+
+## Demo Flow
+1. [Step 1 - what to do/say]
+2. [Step 2 - what to do/say]
+3. ...
+
+## Key Points to Highlight
+- [Important concept 1]
+- [Important concept 2]
+
+## Troubleshooting
+- If [X happens], then [do Y]
+- Common issues: [list]
+
+## Reset Commands
+- `npm run reset`
+- `git reset --hard ORIG_HEAD`
+```
