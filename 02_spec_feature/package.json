@@ -1,0 +1,31 @@
+{
+  "name": "exercise-02-spec-feature",
+  "version": "1.0.0",
+  "description": "Spec-driven feature development with performance requirements",
+  "main": "src/data_processor.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "benchmark": "node benchmark/bench.js",
+    "benchmark:watch": "nodemon benchmark/bench.js",
+    "lint": "eslint src",
+    "reset": "git reset --hard ORIG_HEAD && git clean -fd"
+  },
+  "keywords": [
+    "specification",
+    "performance",
+    "benchmarking",
+    "exercise"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "eslint": "^8.0.0",
+    "benchmark": "^2.1.4",
+    "microtime": "^3.1.1",
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {}
+}

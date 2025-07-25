@@ -1,0 +1,14 @@
+{
+  "name": "exercise-03-parallel-refactor",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src",
+    "reset": "git reset --hard ORIG_HEAD && git clean -fd"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "eslint": "^8.0.0"
+  }
+}
