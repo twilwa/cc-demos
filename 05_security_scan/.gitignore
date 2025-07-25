@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Coverage reports
+coverage/
+
+# Test output
+*.test.log
+
+# Temporary files
+*.tmp
+.DS_Store
+
+# Security scan outputs
+audit_results.tmp
+security_report.json
+
+# Environment files (example - these would contain secrets in real apps)
+.env.production
+.env.prod
+.env.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
