@@ -1,0 +1,37 @@
+diff --git a/src/app.js b/src/app.js
+index 1111111..2222222 100644
+--- a/src/app.js
++++ b/src/app.js
+@@ -1,6 +1,12 @@
+-function main() {
+-  console.log('hello world');
+-  // TODO: implement
+-}
++function main() {
++  console.log('Hello world!');
++  if (process.env.DEBUG) {
++    console.debug('Debug mode enabled');
++  }
++  // Future implementation goes here
++}
++
++module.exports = {
++  main
++};
+
+diff --git a/package.json b/package.json
+index 3333333..4444444 100644
+--- a/package.json
++++ b/package.json
+@@ -2,7 +2,8 @@
+ {
+   "name": "sample-app",
+   "version": "1.0.0",
+-  "main": "index.js",
++  "main": "src/app.js",
++  "type": "module",
+   "scripts": {
+-    "start": "node index.js"
++    "start": "node src/app.js"
+   }
+ }
