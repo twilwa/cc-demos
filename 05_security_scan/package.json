@@ -1,0 +1,26 @@
+{
+  "name": "exercise-05-security-scan",
+  "version": "1.0.0",
+  "description": "Security vulnerability scanning and patching exercise",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "eslint src",
+    "reset": "git reset --hard ORIG_HEAD && git clean -fd",
+    "security:scan": "./scripts/security_scan.sh",
+    "audit": "npm audit",
+    "audit:fix": "npm audit fix"
+  },
+  "dependencies": {
+    "express": "4.16.4",
+    "lodash": "4.17.11"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "eslint": "^8.0.0",
+    "supertest": "^6.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
